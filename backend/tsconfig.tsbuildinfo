@@ -1,0 +1,1 @@
+{"root":["./src/db.ts","./src/index.ts","./src/schema.ts","./src/controllers/accountcontroller.ts","./src/controllers/usercontroller.ts","./src/middleware/usermiddleware.ts","./src/routes/account.ts","./src/routes/user.ts","./src/types/express.d.ts","./src/utils/jwt.ts"],"version":"5.9.2"}
