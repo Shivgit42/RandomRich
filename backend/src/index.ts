@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["https://randomrich.shivamte.me", "http://localhost:5173"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
   })
@@ -24,9 +24,8 @@ app.use("/api/v1/account", accountRouter);
 
 const port = process.env.PORT || 3000;
 const startServer = async () => {
-  await prisma.$connect().then(() => {
-    console.log("Prisma is connected to Postgres DB");
-  });
+  await prisma.$connect();
+  console.log("Prisma is connected to Postgres DB");
 
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
